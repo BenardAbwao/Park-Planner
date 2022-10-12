@@ -98,3 +98,13 @@ Navbar
 .logo {
   width: 12rem;
 }
+
+.rbc-calendar {
+  background-color: white;
+  font-family: 'sans-serif';
+}
+
+.rbc-event-content {
+    background-color: #213A1B;
+    border-color: #213A1B;
+}
