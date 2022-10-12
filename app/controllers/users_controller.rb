@@ -10,10 +10,9 @@ class UsersController < ApplicationController
     end
       
     def create
-
         @user = User.create!(create_params)
-        # user = User.create!(create_params)
         render json: @user
+    end
 
         # if @user.valid?
         #     app_response(status_code: 201, message: "Account Successfully Created", body: user)
@@ -22,8 +21,6 @@ class UsersController < ApplicationController
         #     app_response(status_code: 422, message: "Invalid input", body: user.errors.full_messages)
 
         # end
-
-    end
 
     private
     
