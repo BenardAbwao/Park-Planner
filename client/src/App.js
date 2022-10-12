@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/gallery" element={<Gallery/>}></Route>
           <Route exact path="/calendar" element={<Calendar/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
-          <Route exact path="/logout" element={<Signup/>}></Route>
+          <Route exact path="/signup" element={<Signup/>}></Route>
         </Routes>
       </Router>
   );
