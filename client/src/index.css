@@ -1,5 +1,5 @@
 :root {
-  --primaryColor: #1e81b0;
+  --primaryColor: #1E81B0;
   --mainWhite: #0f2557;
   --offWhite: #f7f7f7;
   --mainBackground: #f1f5f8;
@@ -99,6 +99,7 @@ Navbar
   width: 12rem;
 }
 
+/* Calendar styling */
 .rbc-calendar {
   background-color: white;
   font-family: 'sans-serif';
@@ -107,4 +108,76 @@ Navbar
 .rbc-event-content {
     background-color: #213A1B;
     border-color: #213A1B;
+}
+
+/* itinerary page styling */
+.page-divide {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-content, .reservations {
+  height: 50vh;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.reservations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.camping-res, .todo-res {
+  width: 50vw;
+  text-align: center;
+}
+
+.reservations h2 {
+  font-family: 'sans-serif';
+}
+
+.reservations h3 {
+  font-family: 'sans-serif';
+}
+
+.reservations h4 {
+  font-family: 'sans-serif';
+}
+
+.reservations h5 {
+  color: #213A1B;
+}
+
+.reservations h5:hover {
+  color: #56903A;
+}
+
+.camp-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.title-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.title-date h3, .title-date h4, .camp-title-date h3, .camp-title-date h4{
+  margin: 5px;
+}
+
+img.parks-bg, img.cgs-bg, img.todos-bg, img.calendar-bg, img.itinerary-bg {
+  min-height: 100%;
+  min-width: 1366px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
