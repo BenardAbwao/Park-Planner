@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Parks from "./pages/Parks"
 import Itinerary from "./pages/Itinerary"
-import Logout from "./components/Logout"
+import Signup from "./components/Signup"
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/gallery" element={<Gallery/>}></Route>
           <Route exact path="/calendar" element={<Calendar/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
-          <Route exact path="/logout" element={<Logout/>}></Route>
+          <Route exact path="/signup" element={<Signup/>}></Route>
         </Routes>
       </Router>
   );
