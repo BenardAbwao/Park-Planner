@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Calendar from "./pages/Calendar";
+import Calendar from "./pages/CalendarPage";
 import Gallery from "./pages/Gallery";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
