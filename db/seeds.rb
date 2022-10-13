@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts "🌱 Seeding data..."
+puts "🌱🌱🌱 Seeding data...🌱🌱🌱"
  parks =[
     {
         image: "https://images.unsplash.com/photo-1592670130129-4388cdb9d76e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2031&q=80",
@@ -24,14 +24,14 @@ puts "🌱 Seeding data..."
     {
         image: "https://images.unsplash.com/photo-1572546123322-518b6def2d71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
         name: "Tsavo East National Park",
-        location: "Tsavo",
+        location: "Tsavo East",
         info: "Tsavo East and Tsavo West together form one of the world’s largest national parks, covering 4% of Kenya. Tsavo East NP feels wild and undiscovered; its vast open spaces are mesmerizing. The huge, semi-arid wilderness is home to most safari animals, and although wildlife densities aren’t large, spotting animals is always possible here due to the lack of foliage.",
         website: "https://national-parks.org/kenya/tsavo-east"
     },
     {
         image: "https://images.unsplash.com/photo-1547471080-19acba333038?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         name: "Tsavo West National Park",
-        location: "Tsavo",
+        location: "Tsavo West",
         info: "Tsavo West together with its expansive Tsavo East neighbor form one of the largest national parks in the world. The park is home to the Big Five, but wildlife viewing can be a bit slow at times. There are, however, several landmarks worth visiting including recent lava flows and Mzima Springs with its underwater observation chamber for close-up views of hippos.",
         website: "https://national-parks.org/kenya/tsavo-west"
     },
@@ -154,34 +154,34 @@ campsites = [
         name: "Elewana Lewa Safari Camp",
         location: "Laikipia",
         info:"Sprawling over the rolling plains north of Mt Kenya, Lewa Wildlife Conservancy is a prolific wildlife conservancy that is popular with celebrities, conservationists, writers and photographers. Lewa found recent media attention with stories of a Royal romance and the fairytale engagement that followed. Visitors to Lewa are privy to some of the most spectacular wildlife viewing that Kenya has to offer: lion, leopard and jackal thrive on the rich diversity of prey that inhabits the area. ",
-        park_id: 1
+        park_id: 7
     },
     {
         image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-s/01/ad/d2/fd/vista-de-una-tienda.jpg?w=600&h=-1&s=1",
         name: "Flamingo Hill Tented Camp",
         location: "Nakuru",
         info:"Tucked away in the spectacular Great Rift Valley on the private 6400 acre Congreve Conservancy bordering Lake Nakuru National Park. Mbweha Camp is nestled up against the southern border of Lake Nakuru National Park with beautiful views over the Eburru and Mau ranges. ",
-        park_id: 1
+        park_id: 6
     },
     {
         image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/1f/b9/91/bridge-to-ark.jpg?w=1200&h=-1&s=1",
         name: "The Ark Lodge",
         location: "Aberdare Ranges",
         info:"Set in the heart of the Aberdare National Park, iconic and yes, quirky, The Ark overlooks a floodlit waterhole and salt lick, which attracts a host of awesome wildlife. Resembling and named after Noah’s Ark, The Ark comprises of three decks from which numerous balconies and lounges provide a superb location for wildlife to be seen. ",
-        park_id: 1 
+        park_id: 5 
     },
     {
-        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/77/ee/df/o.jpg?w=1200&h=-1&s=1",
-        name: "Greenwood Safari Camp",
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/5d/4d/03/a-guest-tent-in-the-heart.jpg?w=1100&h=-1&s=1",
+        name: "Angama Safari Camp",
         location: "Narok",
-        info:"The camp is situated on the northern border of the game reserve and this makes all areas of the park accessible for game viewing. You will have the chance to meet the local Maasai community.",
+        info:"Angama Safari Camp is a light-footprint sole-use tented camp, accommodating up to eight guests in four lovely ensuite tents sited deep in the Maasai Mara year-round. This unique camp captures the romance and adventure of the glorious Golden Age of safaris, yet with a lightness of spirit that will both surprise and delight guests.",
         park_id: 8
     },
     {
-        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/77/ee/df/o.jpg?w=1200&h=-1&s=1",
-        name: "Jacarnda Bush Camp",
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/69/44/d2/jacaranda-bush-camp.jpg?w=1100&h=-1&s=1",
+        name: "Jacaranda Bush Camp",
         location: "Narok",
-        info:"dfghjkjhdsxfcgvhbjnkl dfgm uyfdfvnm, oiuytfggnm, poiuyfnm",
+        info:"With garden views, Jacaranda Bush Camp is situated in Musiara Campsite and has a restaurant, a 24-hour front desk, bar, garden, year-round outdoor pool and sun terrace. Free WiFi is available.",
         park_id: 8
     },
 ]
@@ -191,3 +191,5 @@ campsites = [
        Campsite.create(image: campsite[:image], name: campsite[:name], location: campsite[:location], info: campsite[:info], park_id: campsite[:park_id])
     end
 end
+
+puts "🌱🌱🌱 Done Seeding 🌱🌱🌱"
