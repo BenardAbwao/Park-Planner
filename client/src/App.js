@@ -1,5 +1,9 @@
+
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Calendar from "./pages/CalendarPage";
 import Gallery from "./pages/Gallery";
@@ -23,14 +27,22 @@ function App() {
   }, []);
 
   if (!user) return <Signup onLogin={setUser} />;
+  const [parks, setParks] = useState([]);
+
+  useEffect(() => {
+    fetch("/parks")
+      .then((r) => r.json())
+      .then(setParks);
+  }, []);
+  
   return (
       <Router>
         <div>
         <Navbar/>
         </div>
         <Routes>
-          <Route exact path="/" element={<Home/>}></Route>
-          <Route exact path="/parks" element={<Parks/>}></Route>
+          <Route exact path="/" element={<Home parks={parks}/>}></Route>
+          <Route exact path="/parks" element={<Parks parks={parks}/>}></Route>
           <Route exact path="/itinerary" element={<Itinerary/>}></Route>
           <Route exact path="/gallery" element={<Gallery/>}></Route>
           <Route exact path="/calendar" element={<Calendar/>}></Route>
