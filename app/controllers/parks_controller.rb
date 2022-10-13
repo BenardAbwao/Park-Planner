@@ -2,8 +2,13 @@ class ParksController < ApplicationController
 
     def index
         parks = Park.all
-        render json: parks
+        render json: parks 
     end
+
+    def show
+        parks = Park.find(params[:id])
+        render json: parks, include: :campsites
+      end
 
     def create
         park = Park.create!(park_params)
