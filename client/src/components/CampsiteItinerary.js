@@ -1,6 +1,6 @@
 import { FaTrashAlt } from 'react-icons/fa';
 
-function GroundItinerary({reservation, deleteRes}) {
+function CampsiteItinerary({reservation, deleteRes}) {
     
     function handleDelete(id) {
         deleteRes(reservation.id)
@@ -19,4 +19,4 @@ function GroundItinerary({reservation, deleteRes}) {
     )
 }
 
-export default GroundItinerary;
+export default CampsiteItinerary;
