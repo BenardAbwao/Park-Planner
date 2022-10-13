@@ -1,11 +1,13 @@
 // import {collage} from '../images/photo-1665510394116-7bd316a1cba5.avif';
 // import {  Link } from "react-router-dom";
+import React from "react";
 import logo from "../logo.svg";
 import HomeCSS from "../components/home/Home.module.css";
 import Park from "../components/park/ParkCard";
 import SearchBar from "../components/search/SearchBar";
 
-function Home({ user }) {
+function Home({ parks }) {
+  parks = parks.slice(0, 6);
   return (
     <>
       <div className={HomeCSS.home}>
@@ -47,7 +49,7 @@ function Home({ user }) {
           <h1>
             Most <>Popular</> trips
           </h1>
-          <Park />
+          <Park parks={parks} />
         </div>
       </div>
     </>
