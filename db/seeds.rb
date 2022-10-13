@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+puts "🌱 Seeding data..."
 park_list = [
     {
         image: "https://images.unsplash.com/photo-1592670130129-4388cdb9d76e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2031&q=80",
@@ -83,5 +83,85 @@ park_list = [
         location: "Samburu",
         Summary: "Samburu is the most popular reserve in northern Kenya. Wildlife viewing is good, and most big safari animals are easily spotted. The arid environment is home to a variety of north Kenya specials – both birds and mammals. A village visit to a nearby Samburu homestead is a worthwhile activity.",
         visit_site: "https://www.samburu.net/"
+    }
+]
+
+camps_list = [
+    {
+        image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/23/7f/a4/finch-hattons-luxury.jpg?w=1200&h=-1&s=1",
+        name: "Finch Hattons Tented Camp",
+        location: "Tsavo West",
+        info:"Finch Hattons Luxury Tented Camp is renowned for its outstanding quality of accommodation and service for over 25 years. Located in Tsavo National Park, the camp is a unique safari retreat in the true African wilderness with views of Mount Kilimanjaro and Chyulu Hills Relax in your private suite or by the pool, as you watch the resident Hippo pods wallow in the natural spring-pools that flow through the camp.",
+        park_id: 4 
+    },
+    {
+        image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/6a/f8/55/tortilis-camp.jpg?w=800&h=-1&s=1",
+        name: "Elewana Tortilis Camp Amboseli",
+        location: "Loitoktok",
+        info:"Tortilis Camp has a prime location for witnessing the majesty of Africa’s highest mountain, Kilimanjaro. The camp is named after the flat-topped, umbrella thorn tree, the Acacia Tortilis, and embraces a hill in one of Amboseli’s areas of Acacia Tortilis woodland. Located in a private conservancy bordering the national park, game drives, walks, sundowners and bush meals take place both inside the national park and in the conservancy, where guests enjoy exclusivity. ",
+        park_id: 1
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/2e/63/7a/doa-doa-safari-club-tented.jpg?w=1200&h=-1&s=1",
+        name: "Doa-Doa Safari Club Tented Camp & Lodge",
+        location: "Tsavo East",
+        info:"Doa-Doa is located in the Galana Ranch bordering the Tsavo East National Park, on the banks of Galana River. Guests will have the chance to enjoy the breathtaking scenery at every moment. Comfortably seated in the private in front of his tent it will be possible to see hippos , crocodiles and other animals that will approach the river to water.",
+        park_id: 3
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/73/c2/43/rhino-river-camp.jpg?w=1200&h=-1&s=1",
+        name: "Rhino River Camp",
+        location: "Meru",
+        info:"A collection of six luxury cottages built out of sumptuous caramel canvas and sustainably grown wood, raised on platforms above the gently flowing Kindani River will turn your stay at Rhino River Camp into a quiet, exclusive experience.",
+        park_id: 2
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/8a/33/30/filename-dsc-7990-jpg.jpg?w=600&h=-1&s=1",
+        name: "Sweetwaters Serena Camp",
+        location: "Laikipia",
+        info:"A sheltered oasis, clustered around a waterhole and set in the pristine calm of its own private reserve, Sweetwaters Tented Camp is in a class of its own. Abounding with wildlife, unfettered by the more rigorous strictures of the Ol Pejeta Conservancy and designed to offer a charming blend of under canvas ambiance and uncompromising luxury.",
+        park_id: 10
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/e2/cb/22/tent-pano.jpg?w=1100&h=-1&s=1",
+        name: "Ashnil Samburu Camp",
+        location: "Samburu",
+        info:"Ashnil Samburu Camp sits in Buffalo Springs Game Reserve which takes its name from an oasis of crystal clear water at the Western end of the reserve. It is separated from samburu National Reserve by Ewaso Nyiro River and is less hilly and dense yet equallly very attractive. After a gruelling game drive you can take a dip in our pool which is a wonderful viewing deck of the Ewaso Nyiro River and laze around in the calm.",
+        park_id: 11
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/5c/cd/3a/rooms-and-the-pool.jpg?w=600&h=-1&s=1",
+        name: "The Emakoko",
+        location: "Nairobi",
+        info:"The Emakoko is a 24-bed lodge bordering Nairobi national park, only 45 minutes from all the main city airports & attractions. Access to The Emakoko is only through Nairobi National Park and national park fees are necessary. The Emakoko allows people to start and finish their safari in the wild environment they have travelled to enjoy.",
+        park_id: 9
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/77/ee/df/o.jpg?w=1200&h=-1&s=1",
+        name: "Mara Leisure Camp",
+        location: "Narok",
+        info:"Mara Leisure, a Luxury Tented Camp nestled in the Maasai Mara Game Reserve. The camp is situated on the northern border of the game reserve and this makes all areas of the park accessible for game viewing. Our accommodation facilities include 1 exclusive honeymoon tent, 8 spacious jumbo tents, 17 standard “nyati” tents and 3 family “jamii” cottages. With these, all social groups are adequately catered for. You will have the chance to meet the local Maasai community.",
+        park_id: 8
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/96/41/3c/elewana-lewa-safari-camp.jpg?w=1200&h=-1&s=1",
+        name: "Elewana Lewa Safari Camp",
+        location: "Laikipia",
+        info:"Sprawling over the rolling plains north of Mt Kenya, Lewa Wildlife Conservancy is a prolific wildlife conservancy that is popular with celebrities, conservationists, writers and photographers. Lewa found recent media attention with stories of a Royal romance and the fairytale engagement that followed. Visitors to Lewa are privy to some of the most spectacular wildlife viewing that Kenya has to offer: lion, leopard and jackal thrive on the rich diversity of prey that inhabits the area. ",
+        park_id: 7
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-s/01/ad/d2/fd/vista-de-una-tienda.jpg?w=600&h=-1&s=1",
+        name: "Flamingo Hill Tented Camp",
+        location: "Nakuru",
+        info:"Tucked away in the spectacular Great Rift Valley on the private 6400 acre Congreve Conservancy bordering Lake Nakuru National Park. Mbweha Camp is nestled up against the southern border of Lake Nakuru National Park with beautiful views over the Eburru and Mau ranges. ",
+        park_id: 6
+    },
+    {
+        image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/1f/b9/91/bridge-to-ark.jpg?w=1200&h=-1&s=1",
+        name: "The Ark Lodge",
+        location: "Aberdare Ranges",
+        info:"Set in the heart of the Aberdare National Park, iconic and yes, quirky, The Ark overlooks a floodlit waterhole and salt lick, which attracts a host of awesome wildlife. Resembling and named after Noah’s Ark, The Ark comprises of three decks from which numerous balconies and lounges provide a superb location for wildlife to be seen. ",
+        park_id: 5 
     }
 ]
