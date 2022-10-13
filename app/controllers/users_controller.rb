@@ -14,10 +14,12 @@ class UsersController < ApplicationController
 
 
    #Get all the users
+
     def index
         users = User.all
         render json: users
     end
+
 
 
        #Get /me 
@@ -39,3 +41,4 @@ def user_params
 end
 
 end
+
