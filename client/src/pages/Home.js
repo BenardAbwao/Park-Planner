@@ -1,6 +1,6 @@
 // import {collage} from '../images/photo-1665510394116-7bd316a1cba5.avif';
 // import {  Link } from "react-router-dom";
-import logo from "../logo.svg";
+// import logo from "../logo.svg";
 import HomeCSS from "../components/home/Home.module.css";
 import Park from "../components/park/ParkCard";
 import SearchBar from "../components/search/SearchBar";
@@ -11,7 +11,6 @@ import { faMonument } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrellaBeach } from "@fortawesome/free-solid-svg-icons";
 import { faCocktail } from "@fortawesome/free-solid-svg-icons";
 
-
 function Home({ parks }) {
   parks = parks.slice(0, 6);
   return (
@@ -19,7 +18,10 @@ function Home({ parks }) {
       <div className={HomeCSS.home}>
         {/* hero image*/}
         <div className={HomeCSS.hero}>
-          <img src={logo} alt="#" />
+          <img
+            src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            alt="cover"
+          />
         </div>
         {/* search bar  */}
         <div className={HomeCSS.search}>
