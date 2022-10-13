@@ -22,7 +22,7 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login onLogin={setUser} />;
+  if (!user) return <Signup onLogin={setUser} />;
   return (
       <Router>
         <div>
@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/gallery" element={<Gallery/>}></Route>
           <Route exact path="/calendar" element={<Calendar/>}></Route>
           <Route exact path="/login" element={<Login onLogin={setUser}/>}></Route>
-          <Route exact path="/signup" element={<Signup/>}></Route>
+          <Route exact path="/signup" element={<Signup onLogin={setUser} />}></Route>
         </Routes>
       </Router>
   );
