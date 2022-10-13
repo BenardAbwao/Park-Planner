@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   post '/sign_up', to: "users#create"
   resources :users, except: [:new]
 
