@@ -1,6 +1,6 @@
 // import {collage} from '../images/photo-1665510394116-7bd316a1cba5.avif';
 // import {  Link } from "react-router-dom";
-import logo from "../../logo.svg";
+import logo from "../logo.svg";
 import HomeCSS from "../components/home/Home.module.css";
 import Park from "../components/park/ParkCard"
 
@@ -30,7 +30,7 @@ function Home({ user }) {
               <p>Historical</p>
             </div>
           </div>
-          <div className={HomeCSS.ishalf}>
+          <div className={HomeCSS.content}>
             <p>
               Our specialty is the ability to design unique trips and safaris to
               fit every type of tourist,providing a unique opportunity to
