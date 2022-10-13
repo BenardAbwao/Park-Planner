@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Calendar from "./pages/CalendarPage";
@@ -11,6 +11,18 @@ import Signup from "./components/Signup"
 
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // auto-login
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  if (!user) return <Login onLogin={setUser} />;
   return (
       <Router>
         <div>
@@ -22,7 +34,7 @@ function App() {
           <Route exact path="/itinerary" element={<Itinerary/>}></Route>
           <Route exact path="/gallery" element={<Gallery/>}></Route>
           <Route exact path="/calendar" element={<Calendar/>}></Route>
-          <Route exact path="/login" element={<Login/>}></Route>
+          <Route exact path="/login" element={<Login onLogin={setUser}/>}></Route>
           <Route exact path="/signup" element={<Signup/>}></Route>
         </Routes>
       </Router>
