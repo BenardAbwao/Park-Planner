@@ -1,6 +1,4 @@
-// import {collage} from '../images/photo-1665510394116-7bd316a1cba5.avif';
-// import {  Link } from "react-router-dom";
-// import logo from "../logo.svg";
+
 import HomeCSS from "../components/home/Home.module.css";
 import Park from "../components/park/ParkCard";
 import SearchBar from "../components/search/SearchBar";
@@ -64,7 +62,7 @@ function Home({ parks }) {
           <h1>
             Most <>Popular</> trips
           </h1>
-          <Park />
+          <Park parks={parks} />
         </div>
       </div>
     </>

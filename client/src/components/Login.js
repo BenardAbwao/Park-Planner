@@ -2,15 +2,33 @@ import React, { useState } from "react";
 import LoginCSS from "./Login.module.css";
 import Input from "./input/Input";
 
-function Login() {
+function Login({ onLogin }) {
   const [input, setInput] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
+  const [errors, setErrors] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(input, "submitted")
+    setIsLoading(true);
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username: input.username, password: input.password }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
+    console.log(input, "submitted");
   };
 
   const handleOnChange = (e) => {
@@ -28,12 +46,12 @@ function Login() {
             <h2>login</h2>
           </div>
           <Input
-            id="email"
+            id="username"
             type="text"
-            name="email"
-            value={input.email}
+            name="username"
+            value={input.username}
             onChange={handleOnChange}
-            label="Email"
+            label="Username"
           />
           <Input
             id="password"
@@ -44,7 +62,12 @@ function Login() {
             label="password"
           />
           <div className={LoginCSS.buttons}>
-            <button type="submit">Publish</button>
+            <button type="submit">{isLoading ? "Loading..." : "Login"}</button>
+          </div>
+          <div>
+            {errors.map((err) => (
+              <span key={err}>{err}</span>
+            ))}
           </div>
         </div>
       </form>
