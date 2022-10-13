@@ -15,7 +15,6 @@ post '/login', to: 'sessions#create'
 #DELETE /logout
 
 delete '/logout', to: 'sessions#destroy'
-end
 
   post '/sign_up', to: "users#create"
   resources :users, except: [:new]
