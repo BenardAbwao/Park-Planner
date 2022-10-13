@@ -1,4 +1,9 @@
-import { useEffect, useState } from "react";import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Calendar from "./pages/CalendarPage";
 import Gallery from "./pages/Gallery";
@@ -10,6 +15,18 @@ import Signup from "./components/Signup"
 
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // auto-login
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  if (!user) return <Signup onLogin={setUser} />;
   const [parks, setParks] = useState([]);
 
   useEffect(() => {
@@ -17,7 +34,7 @@ function App() {
       .then((r) => r.json())
       .then(setParks);
   }, []);
-
+  
   return (
       <Router>
         <div>
@@ -29,8 +46,8 @@ function App() {
           <Route exact path="/itinerary" element={<Itinerary/>}></Route>
           <Route exact path="/gallery" element={<Gallery/>}></Route>
           <Route exact path="/calendar" element={<Calendar/>}></Route>
-          <Route exact path="/login" element={<Login/>}></Route>
-          <Route exact path="/signup" element={<Signup/>}></Route>
+          <Route exact path="/login" element={<Login onLogin={setUser}/>}></Route>
+          <Route exact path="/signup" element={<Signup onLogin={setUser} />}></Route>
         </Routes>
       </Router>
   );
