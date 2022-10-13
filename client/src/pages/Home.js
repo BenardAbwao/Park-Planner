@@ -2,7 +2,8 @@
 // import {  Link } from "react-router-dom";
 import logo from "../logo.svg";
 import HomeCSS from "../components/home/Home.module.css";
-import Park from "../components/park/ParkCard"
+import Park from "../components/park/ParkCard";
+import SearchBar from "../components/search/SearchBar";
 
 function Home({ user }) {
   return (
@@ -13,7 +14,9 @@ function Home({ user }) {
           <img src={logo} alt="#" />
         </div>
         {/* search bar  */}
-
+        <div className={HomeCSS.search}>
+          <SearchBar />
+        </div>
         {/* about us*/}
         <div className={HomeCSS.about}>
           <div className={HomeCSS.icons}>
@@ -41,8 +44,10 @@ function Home({ user }) {
         </div>
         {/* popular trips  */}
         <div className={HomeCSS.popular}>
-            <h1>Most <>Popular</> trips</h1>
-            <Park/>
+          <h1>
+            Most <>Popular</> trips
+          </h1>
+          <Park />
         </div>
       </div>
     </>
