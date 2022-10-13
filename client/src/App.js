@@ -30,7 +30,8 @@ function App() {
       .then(setParks);
   }, []);
 
-  if (!user) return <Signup onLogin={setUser} />;
+  console.log("user", user);
+  // if (!user) return <Signup onLogin={setUser} />;
   return (
     <Router>
       <div>
