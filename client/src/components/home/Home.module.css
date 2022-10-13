@@ -22,22 +22,32 @@
 }
 
 .about .icons {
-  width: 70%;
+  width: 50%;
   height: 7rem;
-  border: 2px solid red;
   padding: 1rem;
   margin: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.icons .icon {
   text-transform: capitalize;
+  text-align: center;
+  border: 1px solid #000;
+
+}
+
+.icons div{
+  width: 100%;
+  border-left: 1px solid #000;
+}
+
+.icons .icon {
+  font-size: 2rem;
+ 
+  padding: 1rem;
 }
 
 .content {
   width: 70%;
-  border: 2px solid blue;
   text-align: center;
   margin: 1rem;
   padding: 2rem;
