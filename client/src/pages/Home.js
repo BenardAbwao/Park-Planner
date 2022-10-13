@@ -6,6 +6,12 @@ import HomeCSS from "../components/home/Home.module.css";
 import Park from "../components/park/ParkCard";
 import SearchBar from "../components/search/SearchBar";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBuilding } from "@fortawesome/free-solid-svg-icons";
+import { faMonument } from "@fortawesome/free-solid-svg-icons";
+import { faUmbrellaBeach } from "@fortawesome/free-solid-svg-icons";
+import { faCocktail } from "@fortawesome/free-solid-svg-icons";
+
 function Home({ parks }) {
   parks = parks.slice(0, 6);
   return (
@@ -22,16 +28,23 @@ function Home({ parks }) {
         {/* about us*/}
         <div className={HomeCSS.about}>
           <div className={HomeCSS.icons}>
-            <div className={HomeCSS.icon}>
+            <div>
+              <FontAwesomeIcon icon={faCocktail} className={HomeCSS.icon} />
               <p>relax</p>
             </div>
-            <div className={HomeCSS.icon}>
+            <div>
+              <FontAwesomeIcon icon={faBuilding} className={HomeCSS.icon} />
               <p>Cultural</p>
             </div>
-            <div className={HomeCSS.icon}>
+            <div>
+              <FontAwesomeIcon
+                icon={faUmbrellaBeach}
+                className={HomeCSS.icon}
+              />
               <p>Beach</p>
             </div>
-            <div className={HomeCSS.icon}>
+            <div>
+              <FontAwesomeIcon icon={faMonument} className={HomeCSS.icon} />
               <p>Historical</p>
             </div>
           </div>
