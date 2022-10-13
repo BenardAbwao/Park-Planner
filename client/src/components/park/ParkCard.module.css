@@ -1,9 +1,13 @@
 .fullCard {
   display: flex;
   margin: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 100%; */
 }
 
 .card {
+  margin: 1rem;
   text-align: center;
   padding: 1.5rem;
   width: 16.2rem;
