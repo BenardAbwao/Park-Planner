@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Calendar from "./pages/CalendarPage";
-import Gallery from "./pages/Gallery";
+// import Gallery from "./pages/Gallery";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Parks from "./pages/Parks";
@@ -41,7 +41,7 @@ function App() {
         <Route exact path="/" element={<Home parks={parks} />}></Route>
         <Route exact path="/parks" element={<Parks parks={parks} />}></Route>
         <Route exact path="/itinerary" element={<Itinerary />}></Route>
-        <Route exact path="/gallery" element={<Gallery />}></Route>
+        {/* <Route exact path="/gallery" element={<Gallery />}></Route> */}
         <Route exact path="/calendar" element={<Calendar />}></Route>
         <Route
           exact
