@@ -2,7 +2,7 @@ import CampsiteCard from "./CampsiteCard";
 import { Link } from "react-router-dom";
 import { FaBackward } from 'react-icons/fa';
 
-function CampsitesPage({parkCampsites, user, handleResData}) {
+function CampsitesPage({parkCampsites}) {
     
    
     return (
@@ -15,9 +15,9 @@ function CampsitesPage({parkCampsites, user, handleResData}) {
             <div className="results">
                 { parkCampsites.length > 0 ?
                     parkCampsites.map((campsite) => 
-                    <CampsiteCard key={campsite.id} campsite={campsite} user={user} handleResData={handleResData} addresses={campsite.addresses}/>
+                    <CampsiteCard key={campsite.id} campsite={campsite} addresses={campsite.addresses}/>
                     ) :
-                    <h2>Sorry, no campgrounds at this park.</h2>
+                    <h2>Sorry, no campsite at this park.</h2>
                 }       
             </div>
         </div>
